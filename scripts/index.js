@@ -15,20 +15,26 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	if(newsBlock){
 		let btns = newsBlock.querySelectorAll(BTNS_SELECTOR);
-		Array.from(btns).forEach((item) => item.addEventListener('click', onOpenText.bind(this, item, NEWS_ARTICLE_SELECTOR, TEXT_SELECTOR, TEXT_OPEN_CLASS)));
+		//События на все кнопки открытия новостей
+		Array.from(btns).forEach((item) => item.addEventListener('click',
+			onOpenText.bind(this, item, NEWS_ARTICLE_SELECTOR, TEXT_SELECTOR, TEXT_OPEN_CLASS)));
 
 		// Подписка на изменение блока новостей, если будет подгрузка с сервера
 		const observer = new MutationObserver(() => {
-			Array.from(btns).forEach((item) => item.removeEventListener('click', onOpenText.bind(this, item, NEWS_ARTICLE_SELECTOR, TEXT_SELECTOR, TEXT_OPEN_CLASS)));
+			//Удаляем старые события при подгрузке новых новостей с сервера
+			Array.from(btns).forEach((item) => item.removeEventListener('click',
+				onOpenText.bind(this, item, NEWS_ARTICLE_SELECTOR, TEXT_SELECTOR, TEXT_OPEN_CLASS)));
 
+			//Переназначаем кнопки при подгрузке новых новостей с сервера
 			btns = newsBlock.querySelectorAll(BTNS_SELECTOR);
 
-			Array.from(btns).forEach((item) => item.addEventListener('click', onOpenText.bind(this, item, NEWS_ARTICLE_SELECTOR, TEXT_SELECTOR, TEXT_OPEN_CLASS)));
+			//Переназначаем События на все кнопки открытия новостей
+			Array.from(btns).forEach((item) => item.addEventListener('click',
+				onOpenText.bind(this, item, NEWS_ARTICLE_SELECTOR, TEXT_SELECTOR, TEXT_OPEN_CLASS)));
 		});
 
 		observer.observe(newsBlock, {
 			childList: true, // наблюдать за непосредственными детьми
-			subtree: true, // и более глубокими потомками
 			characterDataOldValue: false // передавать старое значение в колбэк
 		});
 	}
