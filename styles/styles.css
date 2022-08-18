@@ -1,0 +1,212 @@
+:root {
+
+}
+
+@font-face {
+	font-family: "airport";
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+
+	src: url('fonts/airport.eot');
+	src: url('fonts/airport.eot?#iefix') format('embedded-opentype'),
+	url('fonts/airport.woff') format('woff'),
+	url('fonts/airport.ttf') format('truetype');
+}
+
+html{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+
+	font-style: normal;
+	font-family: "Segoe UI", sans-serif;
+
+	background-color: #EEEEEE;
+}
+h1,h2{
+	font-family: "airport", sans-serif;
+}
+p, span{
+	font-family: "Segoe UI", sans-serif;
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2047px){
+	body {
+		zoom: 1.1;
+	}
+}
+@media screen and (min-width: 2048px) and (max-width: 2259px){
+	body {
+		zoom: 1.2;
+	}
+}
+@media screen and (min-width: 2260px) and (max-width: 2560px){
+	body {
+		zoom: 1.333;
+	}
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+a{
+	text-decoration: none;
+}
+
+.btn{
+	border: 0;
+	background: transparent;
+
+	text-transform: uppercase;
+	color: #1377B3;
+
+	cursor: pointer;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden{
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.main{
+	background-color: #EEEEEE;
+}
+.newscards-block-wrap{
+	display: flex;
+	justify-content: center;
+
+	margin: 60px auto 0;
+	width: 100%;
+	/*width: max-content;*/
+}
+.newscard{
+	width: 100%;
+	max-width: 550px;
+
+	border-radius: 5px;
+	padding: 30px 50px 50px;
+	/*margin-top: 50px;*/
+	background-color: #FFFFFF;
+	box-sizing: border-box;
+}
+
+@media (min-width: 800px) {
+	.newscard{
+		width: 550px;
+	}
+}
+
+.newscard-header{
+
+}
+.newscard__title{
+	margin: 0;
+	padding: 0;
+	font-size: 35px;
+	color: #555555;
+}
+.newscard-section{
+	margin-top: 20px;
+}
+@media (min-width: 800px){
+	.newscard-section{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.newscard-section__img-wrap{
+	width: 100%;
+}
+@media (min-width: 800px){
+	.newscard-section__img-wrap{
+		display: flex;
+		justify-content: center;
+
+		width: 120px;
+		height: 120px;
+		overflow: hidden;
+	}
+}
+.newscard-section__img{
+
+}
+@media (min-width: 800px) {
+	.newscard-section__img{
+		width: auto;
+		height: auto;
+	}
+}
+
+.newscard-block{
+	width: 100%;
+}
+@media (min-width: 800px){
+	.newscard-block{
+		margin-left: 15px;
+		width: 73%;
+	}
+}
+
+.newscard-block__header{
+	display: flex;
+	align-items: center;
+}
+.newscard-block__title{
+	font-family: "Segoe UI", sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+.newscard-block__link{
+	color: #1377B3;
+}
+.newscard-block__date{
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.newscard-text{
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+
+	overflow: hidden;
+
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+.newscard-text--open{
+	display: block;
+	text-overflow: unset;
+}
+
+.newscard-section__btn{
+	padding: 0;
+	margin: 0;
+}

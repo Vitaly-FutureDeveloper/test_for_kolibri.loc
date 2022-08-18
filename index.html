@@ -2,9 +2,84 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Test for Kolibri</title>
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+	<link rel="preload" href="styles/fonts/airport.woff" crossorigin="anonymous" as="font" type="font/woff">
+	<link rel="preload" href="styles/styles.css" as="style">
+	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
+	<header class="main-header">
+<!--...заголовки сайта...-->
+	</header>
+
+	<main class="main">
+		<h1 class="visually-hidden">Колибри</h1>
+
+		<div class="newscards-block-wrap js-newscards-block-wrap">
+
+		<article itemscope itemtype="http://schema.org/Article" class="js-new-article newscard">
+			<header class="newscard-header">
+				<h2 itemprop="headline" class="newscard__title">Семантика в вёрстке</h2>
+			</header>
+
+			<section class="newscard-section">
+
+				<div class="newscard-section__img-wrap">
+					<img itemprop="image" src="assets/images/news_foto.jpg"
+							 alt="фото новости"
+							 class="newscard-section__img">
+				</div>
+
+				<div class="newscard-block">
+					<div class="newscard-block__header">
+						<h3 class="newscard-block__title">
+							<a href="/" class="newscard-block__link">HTMLBOOK </a>
+						</h3>
+						<span class="newscard-block__date"> -
+							<time itemprop="datePublished" datetime="2014-01-05">5 января 2014</time>
+						</span>
+					</div>
+
+					<p itemprop="articleBody" class="js-newscard-text newscard-text">Семантика, как и всякая научная дисциплина, имеет свой предмет. Но
+						определить этот предмет не так просто, как это может показаться. Хотя
+						большинство лингвистов согласилось бы с тем, что семантика изучает
+						значение языковых выражений, на вопрос о том, что следует понимать под
+						значением, не существует общепринятого ответа. Из-за разного понимания
+						предмета по-разному проводятся границы между семантикой и другими
+						лингвистическими дисциплинами. Поэтому вопрос о предмете семантики
+						заслуживает самого внимательного рассмотрения.
+						Семантика, как и всякая научная дисциплина, имеет свой предмет. Но
+						определить этот предмет не так просто, как это может показаться. Хотя
+						большинство лингвистов согласилось бы с тем, что семантика изучает
+						значение языковых выражений, на вопрос о том, что следует понимать под
+						значением, не существует общепринятого ответа. Из-за разного понимания
+						предмета по-разному проводятся границы между семантикой и другими
+						лингвистическими дисциплинами. Поэтому вопрос о предмете семантики
+						заслуживает самого внимательного рассмотрения.</p>
+
+					<button class="js-btn-read-next btn newscard-section__btn">Читать дальше</button>
+				</div>
+
+			</section>
+
+			<meta itemprop="dateModified" content="2014-01-05T11:48:26+00:00">
+			<!--itemid="ссылка_на_статью"-->
+			<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" content="" itemid="/"/>
+
+		</article>
+
+		</div>
+	</main>
+
+
+	<footer class="main-footer">
+		<!--...подвал сайта...-->
+	</footer>
+
+	<script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
