@@ -124,35 +124,26 @@ input[type='radio'].visually-hidden{
 .newscard-section{
 	margin-top: 20px;
 }
-@media (min-width: 800px){
-	.newscard-section{
-		display: flex;
-		justify-content: space-between;
-		align-items: stretch;
-	}
-}
-
 .newscard-section__img-wrap{
 	width: 100%;
 }
 @media (min-width: 800px){
 	.newscard-section__img-wrap{
+		float: left;
+
 		display: flex;
 		justify-content: center;
 		width: 120px;
 		height: 120px;
-		flex-grow: 0;
 		overflow: hidden;
+
+		margin-right: 15px;
 	}
 }
 @media (min-width: 1280px){
 	.newscard-section__img-wrap{
-		display: flex;
-		justify-content: center;
 		width: 160px;
 		height: 160px;
-		flex-grow: 0;
-		overflow: hidden;
 	}
 }
 
@@ -169,13 +160,7 @@ input[type='radio'].visually-hidden{
 .newscard-block{
 	width: 100%;
 }
-@media (min-width: 800px){
-	.newscard-block{
-		margin-left: 15px;
-		width: 73%;
-		flex-grow: 1;
-	}
-}
+
 
 .newscard-block__header{
 	display: flex;
@@ -199,7 +184,7 @@ input[type='radio'].visually-hidden{
 
 .newscard-text{
 	display: -webkit-box;
-	-webkit-line-clamp: 6;
+	-webkit-line-clamp: 5;
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 
@@ -209,12 +194,17 @@ input[type='radio'].visually-hidden{
 	margin: 0;
 	padding: 0;
 }
+@media (min-width: 1280px){
+	.newscard-text{
+		-webkit-line-clamp: 6;
+	}
+}
 
 .newscard-text--open{
 	display: block;
 	text-overflow: unset;
+	overflow: visible;
 }
-
 .newscard-section__btn{
 	padding: 0;
 	margin: 0;
